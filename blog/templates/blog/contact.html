@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <div class="container"><br>
+    <div class="col-sm-4">
+      <h1>Contact us</h1>
+      <form action="/contact" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+{% endblock %}

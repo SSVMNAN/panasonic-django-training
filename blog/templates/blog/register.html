@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags%}
+
+{% block content %}
+<div class="container"><br>
+    <div class="col-sm-8">
+      <h1>ลงทะเบียน</h1>
+      <p>สมัครสมาชิกเพื่อเข้าใช้งานระบบ</p>
+    <form method='post'>
+        {%csrf_token%}
+        {{ form | crispy }}
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+{% endblock %}
